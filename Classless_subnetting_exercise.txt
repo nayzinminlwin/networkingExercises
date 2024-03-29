@@ -1,0 +1,40 @@
+Problem : Subnet the ip 216.21.5.0 into 31 hosts in each subnets.
+
+Answer : 
+
+216.21.5.0 is a Class C Network.
+Default Subnet Mask is 255.255.255.0
+Default Subnet Mask in binary : 11111111.11111111.11111111.00000000
+
+Num of Host : 31(11111,5Bits)
+So gonna preserve 5bits starting from right,
+Subnet mask in binary : 11111111.11111111.11111111.11100000
+Subnet mask : 255.255.255.224 or /27 (why /27 ? Coz we have 27 Ones in our subnet mask)
+From right to left, the first 1 we encounter is the Subnet Generator,
+so here we encounter 1 at the 6th place from the right.So 2^6 = 32.
+Subnet Generator : 32
+The position of Sub Generator is the Octect Number, which isnt 1 or 2 or 3. So,
+Octect : 4
+
+Now we gonna write down the start of each subnets,
+216.21.5.0
+216.21.5.32
+216.21.5.64
+216.21.5.96
+216.21.5.128
+216.21.5.160
+
+So the subnets are - 
+216.21.5.0 - 216.21.5.31,
+216.21.5.32 - 216.21.5.63,
+216.21.5.64 - 216.21.5.95,
+216.21.5.96 - 216.21.5.127,
+216.21.5.128 - 216.21.5.159,
+216.21.5.160 -  and so on
+
+Ps. 
+The first ip address is the network address and last ip address is the broadcast address.
+So they cant be assigned as a host.
+eg . 
+216.21.5.0 is the network address and 216.21.5.31 is the broadcast address.
+So , From 216.21.5.1 to 216.21.5.30 are the only available networks in first subnet.
