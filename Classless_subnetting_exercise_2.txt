@@ -1,0 +1,21 @@
+Problem : Subnet the ip 196.10.20.0 into 52 hosts in each subnets.
+
+Answer : 
+
+ip address 196.10.20.0 is a Class C network.
+Default subnet mask is 255.255.255.0
+in Binary : 11111111.11111111.11111111.00000000
+
+Num of host : 52  (110100 , 6 Bits)
+So gonna preserve 6bits from the right,
+new subnet mask : 11111111.11111111.11111111.11000000
+Subnet Generator : 64
+Octect : 4
+
+new subnet mask is : 255.255.255.192 or /26
+
+Now new subnets are :
+196.10.20.0 - 196.10.20.63
+196.10.20.64 - 196.10.20.127
+196.10.20.128 - 196.10.20.191
+196.10.20.192 - 196.10.20.255
