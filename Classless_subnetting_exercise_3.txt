@@ -1,0 +1,29 @@
+Problem : Subnet the ip 150.15.0.0 into 500 hosts in each subnets.
+
+Answer : 
+150.15.0.0 is the Class B Network.
+So the Default Subnet Mask is 255.255.0.0
+in Binary : 11111111.11111111.00000000.00000000
+
+Num of Host : 500 (111110100,9Bits)
+Preserving 9spcaes from the right.
+new subnet mask : 11111111.11111111.11111110.00000000
+
+Subnet Generator : 2
+Octect : 3
+
+the new subnet mask is : 255.255.254.0 or /23
+
+So the subnet mask are 
+
+150.15.0.0 - 150.15.1.255
+150.15.2.0 - 150.15.3.255
+150.15.4.0 - 150.15.5.255
+150.15.6.0 - 150.15.7.255
+150.15.8.0 - 150.15.9.255
+and so on . . .
+
+in the class B Network the first 2 octect are not changing.
+So to count the number of hosts and networks available, we gonna count number of Preserved 0 for Host and number of 1 for network.
+Here , Number of Preserved 0 is up to 9 from the right, so it is 2^9. So we will be having 512Hosts(ip Addresses) per Network.
+Then , Number of 1 Remaining is 7, so it is 2^7. So we will be having 128Subnets(Networks).
