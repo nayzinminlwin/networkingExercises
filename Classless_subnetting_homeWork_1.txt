@@ -1,0 +1,22 @@
+Problem : Subnet the ip 201.1.1.0 into 40 hosts in each subnets.
+
+Answer :
+201.1.1.0 is a Class C Network.
+Default Subnet Mask is 255.255.255.0
+in Binary : 11111111.11111111.11111111.00000000
+
+Number of Host req : 40 (101000,6Bits)
+new subnet mask : 11111111.11111111.11111111.11000000
+
+Subnet Generator : 64
+Octect num : 4
+new subnet mask : 255.255.255.192 or /26
+
+New Subnets are 
+201.1.1.0 - 201.1.1.63
+201.1.1.64 - 201.1.1.127
+201.1.1.128 - 201.1.1.191
+201.1.1.192 - 201.1.1.255
+
+Number of Hosts in each network: 64
+Number of Networks  : 4
