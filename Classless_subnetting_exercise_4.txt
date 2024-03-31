@@ -1,0 +1,26 @@
+Problem : Subnet the ip 10.0.0.0 into 100 hosts in each subnets.
+
+Answer :
+
+10.0.0.0 is a Class A Network.
+the Default subnet mask : 255.0.0.0
+in Binary : 11111111.00000000.00000000.00000000
+
+Number of Hosts : 100 (1100100,7Bits)
+New subnet mask : 11111111.11111111.11111111.10000000
+
+Subnet Generator : 128
+Octect : 4
+New Subnet Mask : 255.255.255.128 or /25
+
+new Subets are
+10.0.0.0 - 10.0.0.127
+10.0.0.128 - 10.0.0.255
+10.0.1.0 - 10.0.1.127
+10.0.1.128 - 10.0.1.255
+10.0.2.0 - 10.0.2.127
+10.0.2.128 - 10.0.2.255
+and so on . . . 
+
+Number of Networks : 131,072
+Number of Hosts(ip address in each netwrok) : 128
