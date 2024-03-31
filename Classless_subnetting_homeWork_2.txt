@@ -1,0 +1,24 @@
+Problem : Subnet the ip 170.15.0.0 into 1000 hosts in each subnets.
+
+Answer :
+170.15.0.0 is a Class B Network.
+Default Subnet mask is 255.255.0.0.
+in Binary : 11111111.11111111.00000000.00000000
+
+Number of Host req : 1000 (1111101000 , 10bits)
+new subnet mask : 11111111.11111111.11111100.00000000
+
+Octect : 3
+Subnet Generator : 4
+new subnet mask : 255.255.252.0 or /22
+
+New Subnets are
+170.15.0.0 - 170.15.3.255
+170.15.4.0 - 170.15.7.255
+170.15.8.0 - 170.15.11.255
+170.15.12.0 - 170.15.15.255
+170.15.16.0 - 170.15.19.255
+and so on . . .
+
+Number of Host available : 1024
+Number of Networks available : 64
