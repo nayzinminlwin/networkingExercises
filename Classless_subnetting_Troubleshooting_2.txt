@@ -1,0 +1,24 @@
+Problem : A computer with ip 172.15.68.65; Subnet Mask:255.255.255.240; Default GateWay : 172.15.68.62 is having problem with connecting 
+the router Gigabit Ethernet 0/0 with ip 172.15.68.62; Subnet Mask:255.255.255.240 with a SWITCH.
+
+Answer :
+
+We gonna connect a pc and a router with the help of a SWITCH ; which mean the host ip addresses must be in the same network(subnet range).
+The Subnet Mask is 255.255.255.240
+in Binary : 11111111.11111111.11111111.11110000
+
+Subnet Generator : 16
+
+Subnet ranges are 
+172.15.68.0 - 172.15.68.15
+172.15.68.16 - 172.15.68.31
+172.15.68.32 - 172.15.68.47
+172.15.68.48 - 172.15.68.63 <-- Router IP Address
+172.15.68.64 - 172.15.68.79 <-- PC IP Address
+and so on . . . 
+
+The Default Gateway of PC is True to the Router.
+But PC and Router are in different networks so we should reassign the PC IP Address to 172.15.68.60.
+
+Now Computer is with ip 172.15.68.60; Subnet Mask:255.255.255.240; Default GateWay : 172.15.68.62 is CONNECTED TO
+Router GigaEthernet0/0 ip 172.15.68.62; SubnetMask : 255.255.255.240;  
