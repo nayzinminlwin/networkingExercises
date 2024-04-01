@@ -1,0 +1,23 @@
+Problem : A computer with 192.168.1.127 with 255.255.255.224 is having problem with connecting other pcs.Solve this.
+
+Answer :
+
+Lets see the Class of the ip address. 192.168.1.127, A Class C Network.
+The classless subnet mask is 255.255.255.224.
+In Binary : 11111111.11111111.11111111.11100000
+
+So the Subnet Generator is 32.
+Octect Position is 4.
+
+Subnet Ranges are
+
+192.168.1.0 - 192.168.1.31
+192.168.1.32 - 192.168.1.63
+192.168.1.64 - 192.168.1.95
+192.168.1.96 - 192.168.1.127 <--- (Given IP of the PC)
+192.168.1.128 - 192.168.1.159
+192.168.1.160 - 192.168.1.191
+and so on
+
+The given ip address to the PC is 192.168.1.127,the broadcast address of the network which cant assing to a host.
+So, we should reassign the ip address of the PC to 192.168.1.126.So it will work perfectly.
