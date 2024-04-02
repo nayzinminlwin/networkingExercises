@@ -1,0 +1,15 @@
+Problem : Find the last address (Broadcast address) of the IP 182.44.82.16 /26.
+
+Answer :
+We will use the shortcut method.
+
+Given IP Address : 182.44.82.16 /26
+
+Subnet Mask in Binary 		: 11111111.11111111.11111111.11000000
+
+Complementy of SubnetMask 	: 00000000.00000000.00000000.00111111
+IP Address in Binary 		: 10110110.00101100.01010010.00010000
+----------------------------------------------------------------------
+Bitwise Operator OR 		: 10110110.00101100.01010010.00111111
+
+The Broadcast Network is 182.44.82.63
