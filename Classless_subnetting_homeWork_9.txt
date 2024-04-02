@@ -1,0 +1,11 @@
+Problem : Class B host is to be Split into subnets with a 6Bit Subnet Number.
+	What is the maximun number of subnets and the maxumum numbers of hosts in each subnets?
+
+Answer :
+
+6Bits Subnet Number mean Numbers of Ones in the Subnet Mask.
+So the Subnet mask would be 	: 11111111.11111111.11111100.00000000
+				: 255.255.252.0
+
+The number of Possible Networks : (2^6)-2 = 62
+The number of Possible Hosts in each networks : (2^10)-2 = 1022
