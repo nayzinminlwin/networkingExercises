@@ -1,0 +1,9 @@
+Problem : If a class B network has a subnet mask of 255.255.248.0.
+	What is the maximum number of hosts per subnet?
+
+Answer :
+
+Given Subnet Mask : 255.255.248.0
+in Binary : 11111111.11111111.11111000.00000000
+
+the number of Availalbe Hosts is (2^11)-2 = 2046
