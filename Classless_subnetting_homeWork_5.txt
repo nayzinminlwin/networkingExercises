@@ -1,0 +1,17 @@
+Problem : Find the last address (Broadcast address) of the IP 25.34.12.56 /16.
+
+Answer :
+We will use the shortcut method.
+To Find the Bordcast Address(Last Address), we will use the Bitwise OR operation To BInary of IP and Complement of SubnetMask.
+
+IP address 	: 25.34.12.56
+Subnet Mask	: 255.255.0.0
+
+SubnetMask in Binary 	: 11111111.11111111.00000000.00000000
+--------------------------------------------------------------
+SubnetMask Complement 	: 00000000.00000000.11111111.11111111
+IP in Binary 		: 00011001.00100010.00001100.00111000
+--------------------------------------------------------------
+Bitwise OR Operation 	: 00011001.00100010.11111111.11111111
+
+The last Address is 	: 25.34.255.255
