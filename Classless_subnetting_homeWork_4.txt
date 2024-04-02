@@ -1,0 +1,17 @@
+Problem : Find the 1st address (Network address) of the IP 182.44.82.16 /26.
+
+Answer :
+
+We can solve the problem with reverse networking, like what is the Network Class , Subnet Mask , Subnet Gernerator, Octect Position to Solve.
+But here we will use the shortcut method.(Bitwise Operator AND the Given IP Address AND Subnet Mask)
+
+the ip : 182.44.82.16 
+subnet mask : 255.255.255.192
+
+IP in Binary 		: 10110110.00101100.01010010.00010000
+
+SubnetMask in Binary 	: 11111111.11111111.11111111.11000000
+--------------------------------------------------------------
+Bitwise AND OPERATION	: 10110110.00101100.01010010.00000000
+
+The Network Address is 	: 182.44.82.0
