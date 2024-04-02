@@ -1,0 +1,55 @@
+Problem : A : 10.105.1.113 and B : 10.105.1.91 Using the same Subnet Mask.
+Which of the Values given Below should not be used to remain A and B in the same network.
+
+a. 255.255.255.0
+b. 255.255.255.128
+c. 255.255.255.192
+d. 255.255.255.224
+
+Answer :
+We can do the Normal Approach by Analyzing each subnet mask to determine A and B fall into the same network.
+But here we will use the shortcut approach of Bitwise AND Operation in which we can tell having the same network address mean same network.
+
+A IP 	: 00001010.01101001.00000001.01110001
+B IP 	: 00001010.01101001.00000001.01011011
+
+Mask a	: 11111111.11111111.11111111.00000000
+----------------------------------------------
+AND A 	: 00001010.01101001.00000001.00000000
+AND B	: 00001010.01101001.00000001.00000000
+A & B have the same network address.
+
+
+A IP 	: 00001010.01101001.00000001.01110001
+B IP 	: 00001010.01101001.00000001.01011011
+
+Mask b	: 11111111.11111111.11111111.10000000
+----------------------------------------------
+AND A 	: 00001010.01101001.00000001.00000000
+AND B	: 00001010.01101001.00000001.00000000
+A & B have the same network address.
+
+
+A IP 	: 00001010.01101001.00000001.01110001
+B IP 	: 00001010.01101001.00000001.01011011
+
+Mask c	: 11111111.11111111.11111111.11000000
+----------------------------------------------
+AND A 	: 00001010.01101001.00000001.01000000
+AND B	: 00001010.01101001.00000001.01000000
+A & B have the same network address.
+
+
+A IP 	: 00001010.01101001.00000001.01110001
+B IP 	: 00001010.01101001.00000001.01011011
+
+Mask d	: 11111111.11111111.11111111.11100000
+----------------------------------------------
+AND A 	: 00001010.01101001.00000001.01100000
+AND B	: 00001010.01101001.00000001.01000000
+A & B have different network addresses.
+
+SO the answer is d.255.255.255.224.
+If we assign the subnet mask to A and B, they will fall into different networks.
+
+
