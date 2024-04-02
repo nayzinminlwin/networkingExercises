@@ -1,6 +1,7 @@
 Problem : Find the last address (Broadcast address) of the IP 182.44.82.16 /26.
 
 Answer :
+
 We will use the shortcut method.
 
 Given IP Address : 182.44.82.16 /26

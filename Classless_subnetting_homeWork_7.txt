@@ -1,0 +1,17 @@
+Problem : An organization has a class B network and wish to form subnets for 64 departments.
+	so what will be the new subnet mask.
+
+Answer :
+
+The subnet mask of class B is 255.255.0.0
+
+in Binary : 11111111.11111111.00000000.00000000
+
+Number of Networks : 64 (2^6)
+Octect Position : 3 
+(Why Octect is 3? Becox we had a class B Network that the first two octects are fixed.)
+
+So we are reserving Ones from the left staring from 3rd Octect.
+
+new subnet mask : 11111111.11111111.11111100.00000000
+		: 255.255.252.0
