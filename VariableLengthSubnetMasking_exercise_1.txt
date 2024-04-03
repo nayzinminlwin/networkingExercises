@@ -1,0 +1,40 @@
+Problem : Subnet 192.168.10.0 /24 to Address the network of 20Users,Another 20Users and 60Users networks Connected by 3Routers in Trio.
+
+Answer :
+
+First we gotta know how many networks we have here.
+20 , 20 , 60 users networks mean 3 networks.
+Trio Connection of these three networks with a router mean 3 another networks with Duo IP addresses.
+So we have 6networks.
+
+For the hosts(IP Addresses), we have 20Users , 20Users , 60Users , 2Hosts for each Router Connections.
+
+For 60Users network, we gonna preserve 20(111100,6bits) 6 Zeros from the right.
+The Subnet mask : 11111111.11111111.11111111.11000000
+The Subnet Generator : 64 , Octect Position: 4
+
+The Network range for 60Users is : 192.168.10.0 - 192.168.10.63 /26
+
+
+For 20Users network, we gonna preserve 20(10100,5bits) 5 Zeros from the right.
+The Subnet mask : 11111111.11111111.11111111.11100000
+The Subnet Generator : 32 , Octect Position: 4
+
+The Network range for 20Users is :192.168.10.64 - 192.168.10.95 /27
+
+
+For 20Users network, we gonna preserve 20(10100,5bits) 5 Zeros from the right.
+The Subnet mask : 11111111.11111111.11111111.11100000
+The Subnet Generator : 32 , Octect Position: 4
+
+The Network range for 20Users is :192.168.10.96 - 192.168.10.127 /27
+
+
+For Router Duo network, we gonna preserve 2(10,2bits) 2 Zeros from the right.
+The Subnet mask : 11111111.11111111.11111111.11111100
+The Subnet Generator : 4 , Octect Position: 4
+
+The Network range for 1st Router is :192.168.10.128 - 192.168.10.131 /30
+The Network range for 2nd Router is :192.168.10.132 - 192.168.10.135 /30
+The Network range for 3rd Router is :192.168.10.136 - 192.168.10.139 /30
+					
