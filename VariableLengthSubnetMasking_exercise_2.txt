@@ -1,0 +1,62 @@
+Problem : An ISP has a chunk of CIDR based IP Addresses with 245.248.128.0 /20.
+	ISP wants to give half of its chunk to Organization A, Quartar to Organization B and Qutar to itself.
+	Which of Following is a valid alocation of address to Org A and Org B ?
+
+a.245.248.136.0/21 and 245.248.128.0/22
+b.245.248.128.0/21 and 245.248.128.0/22
+c.245.248.132.0/22 and 245.248.132.0/21
+d.245.248.136.0/24 and 245.248.132.0/21
+
+Answer :
+The ISP IP Address 	: 11110101.11111000.10000000.00000000
+the subnet mask of ISP 	: 11111111.11111111.11110000.00000000
+			: 255.255.240.0
+
+So we got 12Bits(2^12) Available for the chucks.
+
+Half of Chunk for Organization A 	: 2^12/2 = 2^12/2^1 = 2^(12-1) = 2^11 
+Subnet Mask 				: 11111111.11111111.11111000.00000000
+Subnet Gen : 8 , Octect Num : 3
+Range of Org A 				: 245.248.128.0 - 245.248.135.255 /21
+					
+Quatar of Chunk for Organization B 	: 2^12/4 = 2^12/2^2 = 2^(12-2) = 2^10
+Subnet Mask 				: 11111111.11111111.11111100.00000000
+Subnet Gen : 4 , Octect Num : 3
+Range of Org B				: 245.248.136.0 - 245.248.139.255 /22
+
+Quatar of Chunk for ISP 		: 2^12/4 = 2^12/2^2 = 2^(12-2) = 2^10
+Subnet Mask 				: 11111111.11111111.11111100.00000000
+Subnet Gen : 4 , Octect Num : 3
+Range of ISP				: 245.248.140.0 - 245.248.143.255 /22
+
+The Answer is Already given and it is a little bit differ.
+So we gonna switch Positions of Org A and B.
+
+Quatar of Chunk for Organization B 	: 2^12/4 = 2^12/2^2 = 2^(12-2) = 2^10
+Subnet Mask 				: 11111111.11111111.11111100.00000000
+Subnet Gen : 4 , Octect Num : 3
+Range of Org B				: 245.248.128.0 - 245.248.131.255 /22
+
+So, Now the next Network will be starting with 245.248.132.0.
+
+If we check the Answer up there, there are 3options with /22 and only 2 falls between 245.248.128.0 and 245.248.131.255, a & b.
+b is the same network address with different subnet mask which seem impossible.
+So we gonna check if a is Correct.To do that we gonna make A start with 245.248.136.0.
+So now we gonna place ISP Range in between coz next Network will be starting with 245.248.132.0.
+
+Quatar of Chunk for ISP 		: 2^12/4 = 2^12/2^2 = 2^(12-2) = 2^10
+Subnet Mask 				: 11111111.11111111.11111100.00000000
+Subnet Gen : 4 , Octect Num : 3
+Range of ISP				: 245.248.132.0 - 245.248.135.255 /22
+
+
+Half of Chunk for Organization A 	: 2^12/2 = 2^12/2^1 = 2^(12-1) = 2^11 
+Subnet Mask 				: 11111111.11111111.11111000.00000000
+Subnet Gen : 8 , Octect Num : 3
+Range of Org A 				: 245.248.136.0 - 245.248.143.255 /21
+
+Now we see Org A start with 245.248.136.0 with /21 while Org B start with 245.248.128.0 with /22.
+a.245.248.136.0/21 and 245.248.128.0/22 is the correct answer.
+					
+
+
