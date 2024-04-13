@@ -1,0 +1,25 @@
+Network Topology
+----------------
+
+Question : 6 Devices are arranged in a mesh topology.
+		i. number of cables needed ?
+		ii. number of ports for each devices needed ?
+		iii. number of ports in the entire network?
+
+Ans:
+
+Mesh toplogy connect each node individually.
+
+So 6 devices mean 5 others devices to connect.
+So each devices will have 5 ports.
+So the entire network will have 6x5 = 30ports.
+
+but for the number of cables,
+it seems it need 6x5 = 30cables But
+it dont need 30cables Because the cable to A to B and the cable to B to A will be the same.
+So we can consider there are 1 cable save for each 2 ports.
+So we only need 30/2 = 15cables.
+
+i. number of cables needed = 15
+ii. number of ports for each devices needed = 5
+iii. number of ports in the entire network = 30
